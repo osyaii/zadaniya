@@ -1,0 +1,35 @@
+﻿<Window x:Class="lata.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lata"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="griid">
+        <Menu HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="60">
+            <MenuItem Header="цвет">
+                <MenuItem x:Name="blackkey" Header="черный" Click="blackkey_Click" MouseEnter="backColor_MouseEnter"></MenuItem>
+                <MenuItem x:Name="redkey" Header="красный" Click="redkey_Click" MouseEnter="backColor_MouseEnter"></MenuItem>
+                <MenuItem x:Name="bluekey" Header="синий" Click="bluekey_Click" MouseEnter="backColor_MouseEnter"></MenuItem>
+                <MenuItem x:Name="greenkey" Header="зеленый" Click="greenkey_Click" MouseEnter="backColor_MouseEnter"></MenuItem>
+                <MenuItem x:Name="devInfo" Header="Информация о разработчике" Click="devInfo_Click" MouseEnter="devInfo_MouseEnter"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom" Margin="0,397,0,0">
+            <TextBlock x:Name="statusLeft" Text="Строка состояния" />
+            <StatusBarItem HorizontalAlignment="Right" >
+                <TextBlock x:Name="statusRight" Text="" />
+            </StatusBarItem>
+        </StatusBar>        <InkCanvas Name="inkcanvas" Margin="0,24,0,22" Cursor="Pen">            <InkCanvas.DefaultDrawingAttributes >
+                <DrawingAttributes
+         Color = "Black" Width = "1" />
+            </InkCanvas.DefaultDrawingAttributes>        </InkCanvas>
+        <Slider HorizontalAlignment="Left" Margin="84,1,0,0" VerticalAlignment="Top" Width="113" ValueChanged="Slider_ValueChanged"/>
+        <RadioButton Name ="ink" Content="рисование" HorizontalAlignment="Left" Margin="219,2,0,0" VerticalAlignment="Top" Click="ink_Click"/>
+        <RadioButton Name="edit" Content="редактирование" HorizontalAlignment="Left" Margin="325,2,0,0" VerticalAlignment="Top" Click="edit_Click"/>
+        <RadioButton Name="delete" Content="удаление" HorizontalAlignment="Left" Margin="454,1,0,0" VerticalAlignment="Top" Click="delete_Click"/>
+        <Button Name="eraserButton" Content="хороший ластик" HorizontalAlignment="Left" Margin="0,24,0,0" VerticalAlignment="Top" Width="110" Click="eraserButton_Click"/>
+
+    </Grid>
+</Window>
