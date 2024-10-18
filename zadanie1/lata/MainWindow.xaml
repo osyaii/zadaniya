@@ -1,0 +1,35 @@
+﻿<Window x:Class="lata.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lata"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="griid">
+        <Menu HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="60">
+            <MenuItem Header="Меню">
+                <MenuItem x:Name="backColor" Header="Изменить цвет фона" Click="backColor_Click" MouseEnter="backColor_MouseEnter"></MenuItem>
+                <MenuItem x:Name="devInfo" Header="Информация о разработчике" Click="devInfo_Click" MouseEnter="devInfo_MouseEnter"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <ToolBar HorizontalAlignment="Left" Height="23" Margin="65,0,0,0" VerticalAlignment="Top" Width="224">
+            <Button x:Name="openBut" Height="23" Margin="0,3,0,2" Width="23" Click ="backColor_Click">
+                <Image Height="17" Width="16" Source="brush.png"/>
+
+            </Button>
+            <Button x:Name="saveBut" Height="23" Margin="0,3,0,2" Width="23" Click="devInfo_Click">
+                <Image Height="13" Width="13" Source="info.png"/>
+
+            </Button>
+
+        </ToolBar>
+        <StatusBar DockPanel.Dock="Bottom" Margin="0,397,0,0">
+            <TextBlock x:Name="statusLeft" Text="Строка состояния" />
+            <StatusBarItem HorizontalAlignment="Right" >
+                <TextBlock x:Name="statusRight" Text="" />
+            </StatusBarItem>
+        </StatusBar>        
+
+    </Grid>
+</Window>
